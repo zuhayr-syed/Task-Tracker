@@ -1,5 +1,6 @@
 # Task-Tracker
-Python, Django
+
+# Python, Django
 
 • Developed a full-stack application using the Django framework for a user to manage and organize their tasks
 
@@ -9,3 +10,6 @@ Python, Django
 
 • Implemented URL routing to redirect user to a different template link when viewing, deleting, and updating tasks • Created the front-end user interface through     the Bootstrap framework using HTML and CSS styling
 
+
+## Homepage
+<img width="1436" alt="Screen Shot 2021-01-17 at 6 08 45 PM" src="https://user-images.githubusercontent.com/67882898/104858739-63386380-58ef-11eb-88ed-b552fd74d9dc.png">
