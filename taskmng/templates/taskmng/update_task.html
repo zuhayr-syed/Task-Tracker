@@ -1,0 +1,76 @@
+
+<link rel="stylesheet" 
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+crossorigin="anonymous"> <!-- bootstrap cdn to help with styling -->
+
+<style>
+	body{ /* for entire background color */
+		background-color: #008080;
+	}
+	input{ /* dimensions of submit button box */
+		width: 100%;
+		padding: 12px 20px;
+		margin: 8px 0;
+	} 
+	.center-column{ /* centers all components on the site */
+		width:900px;
+		margin: 20px auto;
+		padding:20px;
+		background-color: #C0C0C0;
+		border-radius: 3px;
+		box-shadow: 6px 2px 30px 0px;
+	}
+	.center-title{ /* to style the main title, 'Task Tracker' */
+		color: #003366;
+		font-family: 'Lobster';
+		font-style: italic;
+		background-color: #008B8B;
+		width:600px;
+		margin: 30px auto;
+		padding:30px;
+		border-radius: 10px;
+		box-shadow: 10px 6px 34px 4px;
+	}
+	.center-subtitle{ /* to style the subtitle, 'Update Task' */
+		color: #000000;
+		background-color: #87CEFA;
+		width:310px;
+		margin: 10px auto;
+		padding:10px;
+		border-radius: 20px;
+		box-shadow: 10px 6px 34px 4px;
+	}
+	.btn-submit{ /* to style the button that submits the updated task */
+		color: #FFFFFF;
+		background-color: #CD853F;
+		border-color: #FFFFFF;
+	}
+</style>
+
+<div class ="center-title"> <!-- main title -->
+	<div class="p-3 mb-2 bg-light">
+		<div class="container text-center">
+			<h1 class="font-weight-bold">~ TASK ~</h1>
+			<h1 class="font-weight-bold">~ TRACKER ~</h1>
+		</div>
+	</div>
+</div>
+
+<div class ="center-subtitle"> <!-- subtitle -->
+	<div class="container text-center">
+		<h3>--> Update Task <--</h3>
+	</div>
+</div>
+
+<div class ="center-column">
+
+	<form method="POST" action=""> <!-- for user response into update form -->
+		{% csrf_token %}
+
+		{{form}} <!-- form is shown when the update link is selected -->
+		<input class="btn btn-submit" type="submit" name="Update Task"> <!-- takes user input to submit changes -->
+	</form>
+
+</div>
+

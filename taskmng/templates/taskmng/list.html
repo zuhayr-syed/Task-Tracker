@@ -1,0 +1,99 @@
+<!-- For color values from CSS styling: -->
+<!-- https://www.w3schools.com/cssref/css_colors.asp -->
+
+<link rel="stylesheet" 
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+crossorigin="anonymous"> <!-- bootstrap cdn to help with styling -->
+<style> 
+	body{ /* for entire background color */
+		background-color: #008080;
+	}
+	input{ /* dimensions for the 'Add New Task..' and 'Submit' boxes */
+		width: 100%;
+		padding: 12px 20px;
+		margin: 8px 0;
+	}
+	input::placeholder { /* color of text of the placeholder in the add item box */
+	  color: #d3d3d3;
+	}
+	.center-column{ /* centers all components on the site */
+		width:900px;
+		margin: 20px auto;
+		padding:20px;
+		background-color: #C0C0C0;
+		border-radius: 3px;
+		box-shadow: 6px 2px 30px 0px;
+	}
+	.center-title{ /* to style the main title, 'Task Tracker' */
+		color: #003366;
+		font-family: 'Lobster';
+		font-style: italic;
+		background-color: #008B8B;
+		width:600px;
+		margin: 30px auto;
+		padding:30px;
+		border-radius: 10px;
+		box-shadow: 10px 6px 34px 4px;
+	}
+	.item-row{ /* to style all the boxes with a task */
+		background-color: #2F4F4F;
+		margin: 10px;
+		padding: 20px;
+		border-radius: 3px;
+		color: #fff;
+		font-size: 20px;
+		box-shadow: 0px -1px 10px -4px;
+	}
+	.btn-submit{ /* to style the button that submits a new task */
+		color: #FFFFFF;
+		background-color: #8B4513;
+		border-color: #FFFFFF;
+	}
+	.btn-update{ /* to style the update button */
+		color: #000000;
+		background-color: #87CEFA;
+		border-color: #000000;
+	}
+	.btn-delete{ /* to style the delete button */
+		color: #000000;
+		background-color: #FFA500;
+		border-color: #000000;
+	}
+</style>
+
+<div class ="center-title"> <!-- main title -->
+	<div class="p-3 mb-2 bg-light">
+		<div class="container text-center">
+			<h1 class="font-weight-bold">~ TASK ~</h1>
+			<h1 class="font-weight-bold">~ TRACKER ~</h1>
+		</div>
+	</div>
+</div>
+
+
+<div class ="center-column"> <!-- calls center column which centers everything inside -->
+
+	<!-- Format and style the three buttons by adding the class in input -->
+	<form method="POST" action="/"> <!-- allows form to take user input (action is base url path) -->
+		{% csrf_token %} <!-- for site security (tells django to allow input to go through) -->
+		{{form.title}} <!-- removes checkbox field on homepage by specifying which field to access -->
+		<input class="btn btn-submit" type="submit" name="Create Task"> <!-- submit button for form-->
+	</form>
+
+
+	{% for task in taskmng %} <!-- runs for loop to print each task -->
+		<div class="item-row">
+			<a class="btn btn-sm btn-update" href="{% url 'update_task' task.id %}">Update</a> <!-- get path name 'updated_task' and id to urlpattern -->
+			<a class="btn btn-sm btn-delete" href="{% url 'delete' task.id %}">Delete</a> <!-- if selectec, creates path url for the task id -->
+			
+			{% if task.complete == True %} <!-- if user selects the completed option (checks boolean value from complete in models): -->
+			<strike>{{task}}</strike> <!-- cross-out the task -->
+			{% else %} <!-- else if task is not completed: -->
+			<span>{{task}}</span> <!-- print task normally -->
+			{% endif %}
+		</div>
+	{% endfor %}
+</div> <!-- end of centering -->
+
+
