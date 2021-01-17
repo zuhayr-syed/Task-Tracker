@@ -13,3 +13,6 @@
 
 ## Homepage
 <img width="1436" alt="Screen Shot 2021-01-17 at 6 08 45 PM" src="https://user-images.githubusercontent.com/67882898/104858739-63386380-58ef-11eb-88ed-b552fd74d9dc.png">
+
+## Update Page
+<img width="1436" alt="Screen Shot 2021-01-17 at 6 10 27 PM" src="https://user-images.githubusercontent.com/67882898/104858790-b14d6700-58ef-11eb-9c7d-3aa5f4ec466f.png">
