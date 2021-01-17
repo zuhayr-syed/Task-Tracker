@@ -16,3 +16,6 @@
 
 ## Update Page
 <img width="1436" alt="Screen Shot 2021-01-17 at 6 10 27 PM" src="https://user-images.githubusercontent.com/67882898/104858790-b14d6700-58ef-11eb-9c7d-3aa5f4ec466f.png">
+
+## Delete Page
+<img width="1436" alt="Screen Shot 2021-01-17 at 6 10 47 PM" src="https://user-images.githubusercontent.com/67882898/104858807-c9bd8180-58ef-11eb-97ec-942e529c993f.png">
