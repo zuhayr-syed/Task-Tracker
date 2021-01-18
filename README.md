@@ -19,3 +19,6 @@
 
 ## Delete Page
 <img width="1436" alt="Screen Shot 2021-01-17 at 6 10 47 PM" src="https://user-images.githubusercontent.com/67882898/104858807-c9bd8180-58ef-11eb-97ec-942e529c993f.png">
+
+## Video Demonstration
+https://youtu.be/0CVrcV7v-7E 
