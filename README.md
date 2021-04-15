@@ -2,7 +2,7 @@
 
 ## Python, Django 
 
-• Developed a full-stack application using the Django framework for a user to manage and organize their tasks 
+• Developed a full-stack application using the Django framework for a user to manage and organize their tasks     
 
 • Designed the web app to perform CRUD operations by storing and rendering data through an SQLite database 
 
