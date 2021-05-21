@@ -1,6 +1,6 @@
 # Task-Tracker-Application           
 
-## Python, Django 
+## Python, Django    
 
 • Developed a full-stack application using the Django framework for a user to manage and organize their tasks     
 
